@@ -9,7 +9,7 @@ import {
   SiHtml5, SiCss, SiTypescript,
   SiGit, SiDocker, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
   SiVercel, SiNetlify, SiPostman,
-  SiUnity, SiThreedotjs, SiVite, SiOpenai, SiCsharp,
+  SiUnity, SiThreedotjs, SiVite, SiOpenai,
 } from "react-icons/si";
 import {
   TbBrandAdobeAfterEffect, TbBrandAdobePremier,
