@@ -82,7 +82,7 @@ export default function Navbar() {
         {/* Logo + back */}
         <div className="relative flex items-center gap-5">
           {pathname !== "/" && (
-            <Link href={getBackLink(pathname)} className="flex items-center gap-2 text-white/40 hover:text-[#ff6b1a] transition-colors duration-300 group">
+            <Link href={getBackLink(pathname)} className="flex items-center gap-2 text-white/40 hover:text-[var(--orange)] transition-colors duration-300 group">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="transition-transform duration-300 group-hover:-translate-x-1">
                 <path d="M11 14L6 9l5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -106,7 +106,7 @@ export default function Navbar() {
             const active = pathname === href;
             return (
               <li key={href}>
-                <Link href={href} className={`px-4 py-2 transition-all duration-300 ${active ? "text-[#ff6b1a]" : "text-white/50 hover:text-white/80"}`}>
+                <Link href={href} className={`px-4 py-2 transition-all duration-300 ${active ? "text-[var(--orange)]" : "text-white/50 hover:text-white/80"}`}>
                   {label}
                 </Link>
               </li>
@@ -116,7 +116,7 @@ export default function Navbar() {
             <button 
               suppressHydrationWarning
               onClick={() => setIsContactOpen(true)}
-              className="px-5 py-2 bg-[#ff6b1a] text-black font-bold rounded-full hover:bg-white hover:text-black transition-colors duration-300 flex items-center gap-2"
+              className="px-5 py-2 bg-[var(--orange)] text-black font-bold rounded-full hover:bg-white hover:text-black transition-colors duration-300 flex items-center gap-2"
             >
               Start Now
             </button>
@@ -150,7 +150,7 @@ export default function Navbar() {
                   <Link
                     href={href}
                     onClick={() => setOpen(false)}
-                    className={`block text-4xl font-black tracking-tighter transition-colors duration-300 ${active ? "text-[#ff6b1a]" : "text-white/70 hover:text-white"}`}
+                    className={`block text-4xl font-black tracking-tighter transition-colors duration-300 ${active ? "text-[var(--orange)]" : "text-white/70 hover:text-white"}`}
                   >
                     {label}
                   </Link>
@@ -164,7 +164,7 @@ export default function Navbar() {
                    setOpen(false);
                    setIsContactOpen(true);
                  }}
-                 className="w-full py-4 bg-[#ff6b1a] text-black text-xl font-bold tracking-tight rounded-2xl hover:bg-white hover:text-black transition-colors duration-300"
+                 className="w-full py-4 bg-[var(--orange)] text-black text-xl font-bold tracking-tight rounded-2xl hover:bg-white hover:text-black transition-colors duration-300"
                >
                  Start Now
                </button>

@@ -1,9 +1,10 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SECTION } from "@/app/work/content";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,49 +13,38 @@ const CATEGORIES = [
     num: "01",
     label: "Website",
     title: "Web Design & Development",
-    description:
-      "High-performance websites, Shopify stores, and Next.js web apps — pixel-perfect and built for conversion.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M4 14h32" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="9" cy="11" r="1.2" fill="currentColor"/>
-        <circle cx="13" cy="11" r="1.2" fill="currentColor"/>
-        <circle cx="17" cy="11" r="1.2" fill="currentColor"/>
-      </svg>
-    ),
+    description: "High-performance websites, dynamic web apps, and immersive 3D Three.js experiences built for speed.",
     href: "/projects?cat=website",
+    gradient: "from-[var(--orange)] to-transparent",
+    bg: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
   },
   {
     num: "02",
-    label: "Photo / Poster Design",
-    title: "Visual & Graphic Design",
-    description:
-      "Brand identities, social media creatives, posters, and photo edits that stop the scroll and tell the story.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <rect x="5" y="5" width="30" height="30" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-        <circle cx="14" cy="15" r="3.5" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M5 28l9-8 6 6 5-5 10 9" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-      </svg>
-    ),
-    href: "/projects?cat=design",
+    label: "Games",
+    title: "3D Game Development",
+    description: "Full physics simulations, custom WebGL shaders, and browser-based cinematic gaming experiences.",
+    href: "/projects?cat=website",
+    gradient: "from-[var(--cyber-purple)] to-transparent",
+    bg: "https://images.unsplash.com/photo-1614729939124-03290b56c9ce?q=80&w=2000&auto=format&fit=crop"
   },
   {
     num: "03",
-    label: "Video",
-    title: "Video & Motion Editing",
-    description:
-      "Cinematic reels, brand films, short-form content, and motion graphics that captivate and convert audiences.",
-    icon: (
-      <svg viewBox="0 0 40 40" fill="none" className="w-8 h-8 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
-        <rect x="4" y="9" width="24" height="22" rx="3" stroke="currentColor" strokeWidth="1.5"/>
-        <path d="M28 15l8-5v20l-8-5V15z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M13 16l7 4-7 4V16z" fill="currentColor" opacity="0.5"/>
-      </svg>
-    ),
-    href: "/projects?cat=video",
+    label: "AI / ML",
+    title: "Artificial Intelligence",
+    description: "Python-powered AI automation, intelligent chatbots, and machine learning solutions.",
+    href: "/projects?cat=website",
+    gradient: "from-cyan-400 to-transparent",
+    bg: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop"
   },
+  {
+    num: "04",
+    label: "Visuals",
+    title: "Motion & UI/UX",
+    description: "Brand identities, interactive Figma prototypes, and cinematic video editing.",
+    href: "/projects?cat=design",
+    gradient: "from-pink-500 to-transparent",
+    bg: "https://images.unsplash.com/photo-1557682260-96773eb01377?q=80&w=2000&auto=format&fit=crop"
+  }
 ];
 
 export default function Work() {
@@ -62,13 +52,15 @@ export default function Work() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.utils.toArray(".work-item").forEach((item) => {
-        gsap.from(item, {
-          scrollTrigger: { trigger: item, start: "top 90%", toggleActions: "play none none none" },
-          y: 40,
+      gsap.utils.toArray(".work-card").forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: "top 85%", toggleActions: "play none none none" },
+          y: 60,
           opacity: 0,
-          duration: 0.8,
+          rotateX: 10,
+          duration: 1,
           ease: "power3.out",
+          delay: i * 0.1,
         });
       });
 
@@ -90,108 +82,101 @@ export default function Work() {
     <section
       ref={ref}
       id="work-section"
-      className="relative w-full min-h-screen px-10 md:px-20 pt-64 pb-72 flex flex-col justify-center"
+      className="relative w-full min-h-screen px-6 md:px-20 pt-64 pb-72 flex flex-col justify-center overflow-hidden"
     >
-      <div className="max-w-4xl w-full">
-
-        {/* Header and Filters */}
-        <div className="mb-14 md:mb-20">
-          <p className="font-sans text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">
-            {SECTION.label}
-          </p>
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(0,229,255,0.02)] to-transparent pointer-events-none" />
+      
+      <div className="max-w-7xl w-full mx-auto relative z-10">
+        {/* Header */}
+        <div className="mb-20 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div>
+            <p className="font-sans text-[10px] text-[var(--orange)] tracking-[0.5em] uppercase mb-4 font-bold drop-shadow-[0_0_10px_rgba(0,229,255,0.8)]">
+              {SECTION.label}
+            </p>
             <h2
               className="font-sans font-black tracking-tighter text-white leading-none"
-              style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}
+              style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}
             >
-              {SECTION.heading}
+              Expertise &<br />Capabilities.
             </h2>
-
-            {/* Category pills — decorative only */}
-            <div className="flex flex-wrap gap-2 lg:pb-2">
-              {["Website", "Photo / Poster Design", "Video"].map((cat) => (
-                <Link
-                  key={cat}
-                  href={`/projects${cat !== "All" ? `?cat=${cat.toLowerCase().split(" ")[0]}` : ""}`}
-                  className="px-4 py-2 rounded-full text-[10px] md:text-xs font-medium tracking-widest uppercase transition-all duration-300 bg-transparent text-white/40 border border-white/10 hover:text-white hover:border-white/30"
-                >
-                  {cat}
-                </Link>
-              ))}
-            </div>
           </div>
+          
+          <Link
+            href="/projects"
+            className="group hidden md:inline-flex items-center gap-4 px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+          >
+            <span className="text-[10px] font-bold uppercase tracking-widest text-white/80 group-hover:text-white">View Full Archive</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M2 12L12 2M12 2H4M12 2v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </Link>
         </div>
 
-        {/* 3 Category Cards */}
-        <div className="flex flex-col">
+        {/* 3D Glass Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {CATEGORIES.map((cat, i) => (
             <Link
               key={cat.num}
               href={cat.href}
-              className="work-item group relative flex items-start gap-8 py-10 md:py-14 border-b border-white/8 hover:border-white/20 transition-all duration-500"
+              className="work-card relative group block h-[400px] rounded-3xl overflow-hidden cursor-none"
+              style={{ perspective: "1000px" }}
             >
-              {/* Left orange accent bar */}
-              <div className="absolute left-0 top-0 bottom-0 w-px bg-[#ff6b1a] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out" />
+              {/* Background Image & Overlay */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                style={{ backgroundImage: `url(${cat.bg})`, filter: "grayscale(100%) contrast(1.2)" }}
+              />
+              <div className="absolute inset-0 bg-black/60 group-hover:bg-black/30 transition-colors duration-500" />
+              <div className={`absolute inset-0 bg-gradient-to-t ${cat.gradient} opacity-40 mix-blend-screen group-hover:opacity-80 transition-opacity duration-700`} />
+              
+              {/* Animated Border */}
+              <div className="absolute inset-0 border border-white/10 rounded-3xl group-hover:border-[var(--orange)]/50 transition-colors duration-500 z-20" />
 
-              {/* Number */}
-              <div className="pl-3 shrink-0 w-8 pt-1">
-                <span className="font-mono text-[10px] text-white/20 group-hover:text-[#ff6b1a] tracking-widest transition-colors duration-300">
-                  {cat.num}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 min-w-0 translate-x-0 group-hover:translate-x-1.5 transition-transform duration-500 ease-out">
-                <p className="font-sans text-[10px] text-white/30 group-hover:text-[#ff6b1a]/70 tracking-[0.4em] uppercase font-light mb-2 transition-colors duration-300">
-                  {cat.label}
-                </p>
-                <h3 className="font-sans text-xl md:text-2xl font-black text-white tracking-tighter mb-3 group-hover:text-white transition-colors duration-300">
+              {/* Glass Content Box */}
+              <motion.div 
+                className="absolute inset-x-4 bottom-4 p-8 rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 translate-y-4 group-hover:translate-y-0 transition-all duration-500"
+                whileHover={{ y: -5 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-mono text-xs text-white/40 group-hover:text-[var(--orange)] tracking-widest transition-colors duration-300">
+                    {cat.num}
+                  </span>
+                  <span className="px-3 py-1 rounded-full border border-white/10 text-[9px] uppercase tracking-widest text-white/50 group-hover:border-white/30 group-hover:text-white transition-all">
+                    {cat.label}
+                  </span>
+                </div>
+                
+                <h3 className="font-sans text-2xl md:text-3xl font-black text-white tracking-tight mb-3">
                   {cat.title}
                 </h3>
-                <p className="font-sans text-sm text-white/35 group-hover:text-white/60 font-light leading-relaxed max-w-2xl transition-colors duration-300">
+                
+                <p className="font-sans text-sm text-white/50 group-hover:text-white/90 font-light leading-relaxed max-w-sm transition-colors duration-300 line-clamp-2">
                   {cat.description}
                 </p>
 
-                <span className="mt-4 inline-flex items-center gap-1.5 text-[10px] text-white/20 group-hover:text-white/55 tracking-widest uppercase transition-colors duration-200">
-                  View Projects
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                    <path d="M2 8L8 2M8 2H4M8 2v4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                <div className="mt-6 flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-[var(--orange)] opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-500 delay-100">
+                  Explore category
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </span>
-              </div>
-
-              {/* Icon */}
-              <div className="hidden md:flex shrink-0 items-center pt-2 text-white">
-                {cat.icon}
-              </div>
+                </div>
+              </motion.div>
             </Link>
           ))}
-
-          {/* 4th item — View Full Projects CTA */}
-          <Link
-            href="/projects"
-            className="work-item group relative flex items-center gap-8 py-10 md:py-14 border-b border-white/8 hover:border-white/20 transition-all duration-500"
-          >
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-[#ff6b1a] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-500 ease-out" />
-            <div className="pl-3 shrink-0 w-8">
-              <span className="font-mono text-[10px] text-white/20 group-hover:text-[#ff6b1a] tracking-widest transition-colors duration-300">→</span>
-            </div>
-            <div className="flex-1 translate-x-0 group-hover:translate-x-1.5 transition-transform duration-500 ease-out">
-              <p className="font-sans text-[10px] text-white/30 group-hover:text-[#ff6b1a]/70 tracking-[0.4em] uppercase font-light mb-2 transition-colors duration-300">
-                Full Portfolio
-              </p>
-              <h3 className="font-sans text-xl md:text-2xl font-black text-white tracking-tighter group-hover:text-white transition-colors duration-300">
-                View All Projects
-              </h3>
-            </div>
-            <div className="hidden md:flex items-center gap-2 text-white/20 group-hover:text-[#ff6b1a] transition-colors duration-300 pr-2">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <path d="M6 14h16M16 8l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </Link>
         </div>
 
+        {/* Mobile View All CTA */}
+        <div className="mt-12 flex justify-center md:hidden">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-[var(--orange)] bg-[var(--orange)]/10 text-[var(--orange)] text-[10px] font-bold uppercase tracking-widest"
+          >
+            View Full Archive
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <path d="M2 10L10 2M10 2H4M10 2v8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </Link>
+        </div>
       </div>
     </section>
   );

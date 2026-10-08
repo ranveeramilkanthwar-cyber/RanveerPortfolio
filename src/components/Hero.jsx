@@ -47,7 +47,7 @@ export default function Hero() {
       className="relative min-h-[135vh] flex flex-col justify-center px-10 md:px-24 overflow-hidden"
     >
       <div className="relative z-10 max-w-5xl">
-        <p className="hero-label text-[10px] md:text-xs text-[#ff6b1a] tracking-[0.2em] uppercase font-bold mb-6">
+        <p className="hero-label text-[10px] md:text-xs text-[var(--orange)] tracking-[0.2em] uppercase font-bold mb-6 drop-shadow-[0_0_15px_rgba(0,229,255,0.8)]">
           Creative Developer & UI Engineer
         </p>
 
