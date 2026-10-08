@@ -48,7 +48,7 @@ export default function Hero() {
     >
       <div className="relative z-10 max-w-5xl">
         <p className="hero-label text-[10px] md:text-xs text-[#ff6b1a] tracking-[0.2em] uppercase font-bold mb-6">
-          Digital Experience Designer
+          Creative Developer & UI Engineer
         </p>
 
         <h1
@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <span className="hero-line block ghost z-0">Hey, I'm</span>
           <span className="block text-white -mt-2 md:-mt-6 z-10 hero-perspective">
-            {"Sarang.".split("").map((char, index) => (
+            {"Ranveer.".split("").map((char, index) => (
               <span key={index} className="hero-letter inline-block">
                 {char === " " ? "\u00A0" : char}
               </span>
@@ -66,7 +66,7 @@ export default function Hero() {
 
         <div className="max-w-lg hero-sub flex flex-col gap-6">
           <BlurText
-            text="I create *immersive* digital experiences that blend design, motion, and technology into something visually *memorable* and smooth to use. My work focuses on building websites and visuals with strong *atmosphere*, *detail*, and *storytelling*."
+            text="I engineer stunning web & *game* experiences from *zero* to *launch*. From 3D browser games with physics simulation to AI-powered web apps — I build things that look *cinematic* and feel *premium*."
             delay={30}
             animateBy="words"
             direction="bottom"
@@ -74,7 +74,7 @@ export default function Hero() {
             className="text-base md:text-[17px] text-white/60 font-medium leading-[1.6]"
           />
           <BlurText
-            text="I mainly work with React, Shopify, Flutter, editing, and visual design, combining development with *cinematic* styling and *modern* user experiences."
+            text="I work with *Three.js*, *React*, *Next.js*, *Python/AI*, *Flutter*, *Unity*, *Vite*, and *Node.js* — combining modern development with *cinematic* design and *interactive* 3D experiences."
             delay={22}
             animateBy="words"
             direction="bottom"
@@ -82,7 +82,7 @@ export default function Hero() {
             className="text-xs md:text-sm text-white/40 font-light leading-relaxed"
           />
           <BlurText
-            text="So far, I’ve completed *6* *websites*, edited *75+* *videos*, and created *500+* *photo* *edits* and visual concepts. Currently, I’m focusing on a *job* *app* and a *billing* *app* while continuing to explore *creative* *development* and *interactive* *design*."
+            text="I've shipped *3D games*, *AI web apps*, *e-commerce sites*, *mobile apps*, and *open source tools*. Currently based in *India*, building the future one commit at a time."
             delay={15}
             animateBy="words"
             direction="bottom"

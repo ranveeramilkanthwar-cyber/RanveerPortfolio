@@ -69,13 +69,13 @@ export default function Footer() {
         {/* name + tagline */}
         <div>
           <p className="text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">
-            Creative Developer
+            Creative Developer & UI Engineer
           </p>
           <h2
             className="font-black tracking-tighter leading-[0.85]"
             style={{ fontSize: "clamp(3rem, 8vw, 7rem)" }}
           >
-            <span className="block text-white">Sarang</span>
+            <span className="block text-white">Ranveer</span>
           </h2>
         </div>
 
@@ -121,10 +121,10 @@ export default function Footer() {
           className="text-[10px] text-white/20 tracking-widest"
           style={{ fontFamily: '"Times New Roman", Times, serif', fontStyle: "italic" }}
         >
-          sarangwalle@gmail.com
+          ranveeramilkanthwar@gmail.com
         </p>
         <p className="text-[10px] text-white/15 tracking-[0.3em] uppercase">
-          © {new Date().getFullYear()} Sarang Walle. All rights reserved.
+          © {new Date().getFullYear()} Ranveer Milkanthwar. All rights reserved.
         </p>
       </div>
 

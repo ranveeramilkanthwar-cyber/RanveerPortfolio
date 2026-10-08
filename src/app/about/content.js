@@ -4,15 +4,14 @@
 
 import {
   SiReact, SiNextdotjs, SiJavascript, SiTailwindcss,
-  SiFlutter, SiShopify, SiPython, SiCplusplus,
+  SiFlutter, SiPython, SiCplusplus,
   SiDavinciresolve, SiFigma,
-  SiHtml5, SiCss, SiTypescript, SiPhp, SiGo, SiRust, SiSwift, SiKotlin,
-  SiGit, SiDocker, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiMysql, SiRedis,
+  SiHtml5, SiCss, SiTypescript,
+  SiGit, SiDocker, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
   SiVercel, SiNetlify, SiPostman,
+  SiUnity, SiThreedotjs, SiVite, SiOpenai, SiCsharp,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
 import {
-  TbCut, TbSql, TbPhoto,
   TbBrandAdobeAfterEffect, TbBrandAdobePremier,
   TbBrandAdobePhotoshop, TbBrandAdobeIllustrator,
 } from "react-icons/tb";
@@ -22,72 +21,58 @@ export const SECTION = {
 };
 
 export const HEADING = {
-  line1: "Crafting",
-  line2: "the",
-  line3: "invisible.",   // ghost (outline) style
+  line1: "I'm",
+  line2: "Ranveer.",
+  line3: "Developer & Creator.",   // ghost (outline) style
 };
 
 // *word* = highlighted/bold in BlurText
 export const BIO = [
-  "I am a *creative developer* and *digital designer* from *Kerala*, currently pursuing my second-year BSc in *Cybersecurity* at Vedavyasa Arts and Science College. Passionate about blending creativity with technology, I focus on building modern digital experiences that combine strong *visual storytelling*, *immersive aesthetics*, and functional web development.",
-  "Over the years, I have worked on *7+ websites* along with multiple digital creative projects across *branding*, *poster design*, *motion graphics*, ecommerce experiences, *video editing*, and visual campaigns. My work is heavily inspired by *cinematic design*, modern internet culture, *luxury branding aesthetics*, and emotionally driven visual storytelling.",
-  "As a creative developer, I specialize in *modern frontend development*, *responsive website experiences*, *Shopify ecommerce stores*, *portfolio websites*, and visually immersive landing pages. My design philosophy focuses on creating websites that feel *premium*, *smooth*, *interactive*, and *emotionally engaging* rather than generic or template-based.",
-  "I combine *development and design* into one creative workflow. This allows me to build websites that not only function efficiently but also create strong *visual impact* through typography, layout systems, *cinematic compositions*, and modern UI aesthetics. My projects are designed with attention to detail, branding consistency, and clean user experiences across desktop and mobile devices.",
-  "In addition to web development, I have extensive experience in *digital design* and *creative content production*. My portfolio includes *cinematic posters*, *luxury branding visuals*, promotional campaigns, social media creatives, and modern graphic design projects. My visual style often uses *bold typography*, *dark luxury themes*, *cinematic lighting*, futuristic compositions, and immersive design elements that create memorable digital identities.",
-  "I also work on *ecommerce experiences* and *Shopify-based stores*, focusing on minimal yet visually powerful layouts that improve branding, storytelling, and customer engagement. My ecommerce work combines modern UI design with clean presentation systems to create *premium online shopping experiences*.",
-  "Beyond design and development, I am passionate about *creative technology*, *AI-assisted workflows*, experimental interfaces, and modern digital culture. I actively explore new ideas around creative systems, *futuristic branding*, *immersive web experiences*, and innovative digital presentation styles.",
-  "Alongside website development and design, I have experience in *video editing*, *motion graphics*, and *cinematic storytelling*. I have worked on creative edits, emotional visual content, social media videos, and short film-related projects, helping me develop a deeper understanding of pacing, atmosphere, framing, and storytelling within digital media.",
-  "My creative philosophy is built around *originality*, *emotion*, *simplicity*, and *atmosphere*. I believe digital experiences should feel alive, visually expressive, and emotionally connected while maintaining modern usability and clean functionality. My work reflects a balance between *technical development* and *artistic direction*, helping brands and creators establish stronger digital identities.",
-  "Through continuous learning and experimentation, I continue to expand my work across website development, branding systems, *cinematic visuals*, ecommerce UI, *creative coding*, poster design, and immersive digital experiences. My goal is to create modern digital work that combines creativity, storytelling, technology, and strong visual identity into one cohesive experience."
+  "I am a *creative developer* and *UI engineer* from *India*, passionate about building immersive *3D games*, *web applications*, and premium digital experiences. I engineer everything from zero to launch — blending cinematic design with high-performance code.",
+  "I specialize in *Three.js 3D browser games*, *React & Next.js* web apps, *Python & AI/ML* projects, *Flutter mobile apps*, and *Unity game development*. I love creating interactive experiences that feel *alive* and *premium*.",
+  "Some of my work includes *CyberRun 3D* — a Fall Guys-style physics obstacle course game built with Three.js and Cannon.js, *SpaceDefenders 3D* — a high-intensity space shooter, and *MazeEscapers 3D* — a cinematic 3D maze game.",
+  "Beyond games, I build *AI-powered web apps*, *e-commerce websites*, *open source tools*, and *cross-platform mobile apps*. My workflow spans the full stack — from UI/UX design in Figma to backend APIs in Node.js and Express.",
+  "I combine *development and design* into one creative workflow, crafting products that are not only technically solid but also visually *striking* and *emotionally engaging*. Every project is built from scratch with attention to performance, SEO, and cross-device compatibility.",
 ];
 
 export const RESUME_URL = "/resume.pdf";
 
 export const TECH = [
-  { name: "React",          icon: SiReact },
-  { name: "Next.js",        icon: SiNextdotjs },
-  { name: "JavaScript",     icon: SiJavascript },
-  { name: "TypeScript",     icon: SiTypescript },
-  { name: "HTML5",          icon: SiHtml5 },
-  { name: "CSS3",           icon: SiCss },
-  { name: "Tailwind CSS",   icon: SiTailwindcss },
-  { name: "Node.js",        icon: SiNodedotjs },
-  { name: "Express",        icon: SiExpress },
-  { name: "Flutter",        icon: SiFlutter },
-  { name: "Shopify Liquid", icon: SiShopify },
-  { name: "Python",         icon: SiPython },
-  { name: "Java",           icon: FaJava },
-  { name: "C++",            icon: SiCplusplus },
-  { name: "PHP",            icon: SiPhp },
-  { name: "Go",             icon: SiGo },
-  { name: "Rust",           icon: SiRust },
-  { name: "Swift",          icon: SiSwift },
-  { name: "Kotlin",         icon: SiKotlin },
-  { name: "SQL",            icon: TbSql },
-  { name: "MongoDB",        icon: SiMongodb },
-  { name: "PostgreSQL",     icon: SiPostgresql },
-  { name: "MySQL",          icon: SiMysql },
-  { name: "Redis",          icon: SiRedis },
-  { name: "Git",            icon: SiGit },
-  { name: "Docker",         icon: SiDocker },
-  { name: "Vercel",         icon: SiVercel },
-  { name: "Netlify",        icon: SiNetlify },
-  { name: "Postman",        icon: SiPostman },
+  { name: "React",        icon: SiReact },
+  { name: "Next.js",      icon: SiNextdotjs },
+  { name: "Three.js",     icon: SiThreedotjs },
+  { name: "JavaScript",   icon: SiJavascript },
+  { name: "TypeScript",   icon: SiTypescript },
+  { name: "HTML5",        icon: SiHtml5 },
+  { name: "CSS3",         icon: SiCss },
+  { name: "Tailwind CSS", icon: SiTailwindcss },
+  { name: "Vite",         icon: SiVite },
+  { name: "Node.js",      icon: SiNodedotjs },
+  { name: "Express",      icon: SiExpress },
+  { name: "Python",       icon: SiPython },
+  { name: "AI / ML",      icon: SiOpenai },
+  { name: "Flutter",      icon: SiFlutter },
+  { name: "C++",          icon: SiCplusplus },
+  { name: "C#",           icon: SiCsharp },
+  { name: "Unity",        icon: SiUnity },
+  { name: "Git",          icon: SiGit },
+  { name: "MongoDB",      icon: SiMongodb },
+  { name: "PostgreSQL",   icon: SiPostgresql },
+  { name: "Vercel",       icon: SiVercel },
+  { name: "Netlify",      icon: SiNetlify },
 ];
 
 export const CREATIVE = [
-  { name: "After Effects",   icon: TbBrandAdobeAfterEffect },
-  { name: "Premiere Pro",    icon: TbBrandAdobePremier },
+  { name: "Figma",        icon: SiFigma },
+  { name: "Photoshop",    icon: TbBrandAdobePhotoshop },
+  { name: "Illustrator",  icon: TbBrandAdobeIllustrator },
+  { name: "After Effects",icon: TbBrandAdobeAfterEffect },
+  { name: "Premiere Pro", icon: TbBrandAdobePremier },
   { name: "DaVinci Resolve", icon: SiDavinciresolve },
-  { name: "CapCut",          icon: TbCut },
-  { name: "Photoshop",       icon: TbBrandAdobePhotoshop },
-  { name: "Lightroom",       icon: TbPhoto },
-  { name: "Figma",           icon: SiFigma },
-  { name: "Illustrator",     icon: TbBrandAdobeIllustrator },
 ];
 
 export const EXPERIENCE = [
-  { role: "Freelance Developer",                       period: "2024 – Present" },
-  { role: "Freelance Video Editor",                    period: "2022 – Present" },
-  { role: "Freelance Photo Editor & Graphic Designer", period: "2020 – Present" },
+  { role: "Creative Developer & UI Engineer",    period: "2024 – Present" },
+  { role: "3D Game Developer (Three.js/Unity)",  period: "2024 – Present" },
+  { role: "AI/ML Engineer & App Developer",      period: "2025 – Present" },
 ];

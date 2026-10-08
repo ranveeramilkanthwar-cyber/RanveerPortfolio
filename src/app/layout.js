@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
   display: "swap"
 });
 
-const BASE = "https://sarang-space.site";
+const BASE = "https://ranveer.dev"; // Update this to your actual domain
 
 export const viewport = {
   themeColor: "#ff6b1a",
@@ -22,42 +22,43 @@ export const metadata = {
   metadataBase: new URL(BASE),
 
   title: {
-    default: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
-    template: "%s — Sarang | Next.js Developer & Shopify Expert",
+    default: "Ranveer — Creative Developer & UI Engineer | 3D Games, AI/ML, React, Next.js",
+    template: "%s — Ranveer | Creative Developer & Game Dev",
   },
   description:
-    "Creative developer and designer specializing in Next.js websites, Shopify stores, branding, cinematic video editing, motion graphics, and premium digital experiences.",
+    "Creative Developer & UI Engineer from India. I build immersive 3D browser games, React/Next.js web apps, Python AI/ML applications, Flutter mobile apps, and Unity games. I engineer stunning experiences from zero to launch.",
   keywords: [
-    "Next.js Developer", "Creative Web Developer", "Shopify Expert", 
-    "Video Editor", "Graphic Designer", "UI/UX Designer", 
-    "Cinematic Portfolio", "GSAP Animation", "React Developer",
-    "Modern Web Design", "Portfolio Template", "Freelance Developer India"
+    "Creative Developer India", "3D Game Developer", "Three.js Developer",
+    "React Developer", "Next.js Developer", "Unity Game Dev",
+    "AI ML Developer", "Flutter App Developer", "UI Engineer",
+    "CyberRun 3D", "Browser Game Developer", "Vite Developer",
+    "Ranveer Developer", "Creative UI Engineer India"
   ],
-  authors: [{ name: "Sarang", url: BASE }],
-  creator: "Sarang",
-  publisher: "Sarang",
+  authors: [{ name: "Ranveer", url: BASE }],
+  creator: "Ranveer",
+  publisher: "Ranveer",
 
   openGraph: {
     type: "website",
     locale: "en_US",
     url: BASE,
-    siteName: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
-    title: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
-    description: "Creative developer and designer specializing in Next.js websites, Shopify stores, branding, cinematic video editing, motion graphics, and premium digital experiences.",
+    siteName: "Ranveer — Creative Developer & UI Engineer",
+    title: "Ranveer — Creative Developer & UI Engineer | 3D Games, AI/ML, React, Next.js",
+    description: "Creative Developer & UI Engineer from India. Building 3D browser games, React/Next.js apps, AI/ML projects, Flutter mobile apps, and Unity games.",
     images: [{
       url: "/og-image.png",
       width: 1200,
       height: 630,
-      alt: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
+      alt: "Ranveer — Creative Developer & UI Engineer",
     }],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Sarang — Next.js Developer, Shopify Expert, Graphic Designer & Video Editor",
-    description: "Creative developer and designer specializing in Next.js websites, Shopify stores, branding, cinematic video editing, motion graphics, and premium digital experiences.",
+    title: "Ranveer — Creative Developer & UI Engineer | 3D Games, AI/ML, React",
+    description: "Creative Developer & UI Engineer from India building immersive 3D games, web apps, AI/ML projects, and Flutter mobile apps.",
     images: ["/og-image.png"],
-    creator: "@sarang",
+    creator: "@ranveeramilkanthwar",
   },
 
   robots: {
@@ -93,10 +94,10 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": `${BASE}/#person`,
-      "name": "Sarang",
+      "name": "Ranveer",
       "url": BASE,
-      "jobTitle": "Creative Developer",
-      "description": "Creative developer building cinematic digital experiences at the intersection of design and code. Specialising in Next.js, GSAP, Three.js, and WebGL.",
+      "jobTitle": "Creative Developer & UI Engineer",
+      "description": "Creative Developer & UI Engineer from India building immersive 3D browser games, React/Next.js web apps, Python AI/ML projects, Flutter mobile apps, and Unity games. I engineer stunning experiences from zero to launch.",
       "knowsAbout": [
         "Next.js", "React", "GSAP", "Three.js", "WebGL", "Tailwind CSS",
         "JavaScript", "TypeScript", "Node.js", "Flutter", "Shopify",
@@ -169,7 +170,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": `${BASE}/#localbusiness`,
-      "name": "Sarang — Creative Developer",
+      "name": "Ranveer — Creative Developer & UI Engineer",
       "image": `${BASE}/og-image.png`,
       "url": BASE,
       "telephone": "+91-0000000000",
@@ -186,8 +187,8 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${BASE}/#website`,
       "url": BASE,
-      "name": "Sarang — Creative Developer",
-      "description": "Portfolio of Sarang, a creative developer building cinematic digital experiences with React, Next.js, GSAP, Three.js, and WebGL.",
+      "name": "Ranveer — Creative Developer & UI Engineer",
+      "description": "Portfolio of Ranveer, a Creative Developer & UI Engineer building 3D browser games, React/Next.js web apps, AI/ML projects, and Flutter mobile apps from India.",
       "publisher": { "@id": `${BASE}/#person` },
       "inLanguage": "en-US",
     },
@@ -195,7 +196,7 @@ const jsonLd = {
       "@type": "ProfilePage",
       "@id": `${BASE}/#profilepage`,
       "url": BASE,
-      "name": "Sarang — Creative Developer Portfolio",
+      "name": "Ranveer — Creative Developer & UI Engineer Portfolio",
       "isPartOf": { "@id": `${BASE}/#website` },
       "about": { "@id": `${BASE}/#person` },
       "mainEntity": { "@id": `${BASE}/#person` },
