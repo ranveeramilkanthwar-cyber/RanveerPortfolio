@@ -2,13 +2,13 @@ import PageShell from "@/components/PageShell";
 import ContactPage from "@/views/contact";
 
 export const metadata = {
-  title:       "Contact — Hire a Portfolio Designer, Website Developer, Video Editor or Photo Editor",
-  description: "Get in touch with Sarang to hire a freelance portfolio designer, website developer, video editor, or photo editor. Available for projects worldwide. Fast response, competitive pricing.",
-  keywords:    ["hire website developer", "hire video editor", "hire photo editor", "hire portfolio designer", "freelance contact", "get quote website design"],
-  alternates:  { canonical: "https://sarang-space.site/contact" },
+  title:       "Contact — Hire Ranveer, Creative Developer & UI Engineer",
+  description: "Get in touch with Ranveer to hire a freelance Creative Developer and UI Engineer. Available for projects worldwide.",
+  keywords:    ["hire creative developer", "hire ui engineer", "hire game developer", "freelance contact", "get quote website design"],
+  alternates:  { canonical: "https://ranveer.dev/contact" },
   openGraph: {
-    title: "Hire Sarang — Portfolio Designer, Website Developer, Video Editor & Photo Editor",
-    description: "Contact Sarang for freelance website development, video editing, photo editing, and portfolio design projects. Available worldwide.",
+    title: "Hire Ranveer — Creative Developer & UI Engineer",
+    description: "Contact Ranveer for freelance creative development, 3D games, and web app projects. Available worldwide.",
   },
 };
 

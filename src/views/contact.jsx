@@ -36,35 +36,21 @@ export default function ContactPage() {
       const fullNumber = selectedCC.code + phoneNumber;
       const myNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919999999999";
       const msg = encodeURIComponent(
-        `Hi Sarang! My name is ${form.name}.\n\nReason: ${form.reason}\n\nMy number: +${fullNumber}`
+        `Hi Ranveer! My name is ${form.name}.\n\nReason: ${form.reason}\n\nMy number: +${fullNumber}`
       );
       window.open(`https://wa.me/${myNumber}?text=${msg}`, "_blank");
       return;
     }
-    setStatus("sending");
-    setErrorMsg("");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: form.name, email: form.contact, message: form.reason }),
-      });
-      if (res.ok) {
-        setStatus("sent");
-        setForm({ name: "", contact: "", reason: "" });
-        setPhoneNumber("");
-      } else if (res.status === 429) {
-        const data = await res.json();
-        setStatus("error");
-        setErrorMsg(data.error || "Too many messages today. Try again tomorrow.");
-      } else {
-        setStatus("error");
-        setErrorMsg("Something went wrong. Please try again.");
-      }
-    } catch {
-      setStatus("error");
-      setErrorMsg("Something went wrong. Please try again.");
-    }
+    
+    // Email fallback using mailto instead of API
+    const emailSubject = encodeURIComponent(`New Inquiry from ${form.name}`);
+    const emailBody = encodeURIComponent(`Hi Ranveer,\n\n${form.reason}\n\nFrom: ${form.name}\nEmail: ${form.contact}`);
+    window.location.href = `mailto:ranveeramilkanthwar@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    
+    setStatus("sent");
+    setForm({ name: "", contact: "", reason: "" });
+    setPhoneNumber("");
+
   };
 
   useEffect(() => {
