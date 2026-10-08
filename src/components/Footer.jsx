@@ -68,7 +68,7 @@ export default function Footer() {
 
         {/* name + tagline */}
         <div>
-          <p className="text-[10px] text-[var(--orange)] tracking-[0.5em] uppercase mb-4 font-medium">
+          <p className="text-[10px] text-[#ff6b1a] tracking-[0.5em] uppercase mb-4 font-medium">
             Creative Developer & UI Engineer
           </p>
           <h2
@@ -86,7 +86,7 @@ export default function Footer() {
               <Link
                 key={href}
                 href={href}
-                className="text-white/40 hover:text-[var(--orange)] transition-colors duration-300"
+                className="text-white/40 hover:text-[#ff6b1a] transition-colors duration-300"
               >
                 {label}
               </Link>
