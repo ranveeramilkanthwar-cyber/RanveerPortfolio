@@ -16,6 +16,9 @@ const BASE = "https://ranveer.dev"; // Update this to your actual domain
 
 export const viewport = {
   themeColor: "#ff6b1a",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export const metadata = {
@@ -240,66 +243,66 @@ const jsonLd = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What services does Sarang offer?",
+          "name": "What services does Ranveer offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sarang offers creative web development (React, Next.js, GSAP, Three.js), video editing and motion design (After Effects, Premiere Pro, DaVinci Resolve), UI/UX design (Figma, Photoshop), Shopify development, and Flutter mobile app development."
+            "text": "Ranveer offers creative web development (React, Next.js, Three.js), 3D game development (Unity), Python AI/ML solutions, UI/UX design, and Flutter mobile app development."
           }
         },
         {
           "@type": "Question",
-          "name": "How can I hire Sarang for a project?",
+          "name": "How can I hire Ranveer for a project?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can reach out through the contact form at sarang-space.site/contact or email sarangwalle@gmail.com. Sarang is available for freelance projects worldwide."
+            "text": "You can reach out through the contact form at ranveer.dev/contact or email ranveeramilkanthwar@gmail.com. Ranveer is available for freelance projects worldwide."
           }
         },
         {
           "@type": "Question",
-          "name": "What technologies does Sarang work with?",
+          "name": "What technologies does Ranveer work with?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sarang works with React, Next.js, GSAP, Three.js, WebGL, Tailwind CSS, Node.js, Flutter, Shopify Liquid, Python, TypeScript, MongoDB, PostgreSQL, and creative tools like After Effects, Premiere Pro, Figma, and Photoshop."
+            "text": "Ranveer works with React, Next.js, Three.js, WebGL, Tailwind CSS, Node.js, Flutter, Python, TypeScript, Unity, MongoDB, and PostgreSQL."
           }
         },
         {
           "@type": "Question",
-          "name": "Where is Sarang based and does he work remotely?",
+          "name": "Where is Ranveer based and does he work remotely?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sarang is based in India and is fully available for remote freelance projects worldwide. He has worked with clients across different countries and time zones."
+            "text": "Ranveer is based in India and is fully available for remote freelance projects worldwide."
           }
         },
         {
           "@type": "Question",
-          "name": "How long does a typical project take with Sarang?",
+          "name": "How long does a typical project take with Ranveer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Project timelines depend on scope. A simple portfolio website typically takes 1–2 weeks. A full-stack web application or complex interactive site can take 3–6 weeks. Video editing projects are usually delivered within 3–7 days. Contact Sarang at sarang-space.site/contact for a specific estimate."
+            "text": "Project timelines depend on scope. Contact Ranveer for a specific estimate."
           }
         },
         {
           "@type": "Question",
-          "name": "What makes Sarang different from other freelance developers?",
+          "name": "What makes Ranveer different from other freelance developers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sarang combines three disciplines — web development, video editing, and visual design — in one person. He specializes in cinematic, immersive experiences with GSAP animations, Three.js 3D, and WebGL. His work focuses on feeling as much as function, creating digital experiences that are premium, smooth, and memorable."
+            "text": "Ranveer specializes in cinematic, immersive experiences with Three.js 3D and WebGL, combining game development logic with modern web technologies."
           }
         },
         {
           "@type": "Question",
-          "name": "What is Sarang's background and education?",
+          "name": "What is Ranveer's background and education?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sarang is a 19-year-old from India currently studying Cybersecurity. He has been freelancing since 2020 — starting with photo editing and graphic design, expanding into video editing in 2022, and full-stack web development in 2024. He has 6+ years of creative freelance experience."
+            "text": "Ranveer is a passionate developer from India specializing in full-stack web development, AI, and 3D games."
           }
         }
       ]
     },
     {
       "@type": "HowTo",
-      "name": "How to Hire Sarang as a Freelance Developer or Editor",
-      "description": "Steps to hire Sarang for freelance web development, video editing, or design work",
+      "name": "How to Hire Ranveer as a Freelance Developer",
+      "description": "Steps to hire Ranveer for freelance web development, game development, or design work",
       "totalTime": "PT5M",
       "step": [
         {
@@ -320,7 +323,7 @@ const jsonLd = {
           "@type": "HowToStep",
           "position": 3,
           "name": "Receive a response",
-          "text": "Sarang responds within 24 hours to discuss requirements, timeline, and pricing."
+          "text": "Ranveer responds within 24 hours to discuss requirements, timeline, and pricing."
         },
         {
           "@type": "HowToStep",
@@ -334,10 +337,10 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${BASE}/#webpage`,
       "url": BASE,
-      "name": "Sarang — Portfolio Designer, Website Developer, Video Editor & Photo Editor",
+      "name": "Ranveer — Creative Developer, Game Developer & UI Engineer",
       "isPartOf": { "@id": `${BASE}/#website` },
       "about": { "@id": `${BASE}/#person` },
-      "description": "Portfolio of Sarang — a freelance portfolio designer, website developer, video editor, and photo editor from India building cinematic digital experiences.",
+      "description": "Portfolio of Ranveer — a freelance creative developer, 3D game developer, and UI engineer from India building cinematic digital experiences.",
       "inLanguage": "en-US",
       "speakable": {
         "@type": "SpeakableSpecification",

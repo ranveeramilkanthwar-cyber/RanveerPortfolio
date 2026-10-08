@@ -14,7 +14,6 @@ import {
 import {
   TbBrandAdobeAfterEffect, TbBrandAdobePremier,
   TbBrandAdobePhotoshop, TbBrandAdobeIllustrator,
-  TbBrandCsharp,
 } from "react-icons/tb";
 
 export const SECTION = {
@@ -54,7 +53,6 @@ export const TECH = [
   { name: "AI / ML",      icon: SiOpenai },
   { name: "Flutter",      icon: SiFlutter },
   { name: "C++",          icon: SiCplusplus },
-  { name: "C#",           icon: TbBrandCsharp },
   { name: "Unity",        icon: SiUnity },
   { name: "Git",          icon: SiGit },
   { name: "MongoDB",      icon: SiMongodb },
